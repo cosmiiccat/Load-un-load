@@ -39,7 +39,7 @@ export default function LocationPicker({setLocation, location}) {
   }, [position]);
 
   return (
-    <div className='h-[30%] w-[70%] p-2 bg-amber-100 rounded-xl'>
+    <div className='h-[30%] mx-[20%] p-2 bg-amber-100 rounded-xl flex items-center justify-center'>
         <MapContainer center={position} zoom={13} scrollWheelZoom={false} className='h-full w-full rounded-xl'>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
