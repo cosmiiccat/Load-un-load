@@ -132,3 +132,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Session settings
+SESSION_COOKIE_AGE = 30 * 24 * 60 * 60  # 30 days
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_SAVE_EVERY_REQUEST = False
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+SESSION_COOKIE_SECURE = False  # Set True in production with HTTPS
+SESSION_COOKIE_HTTPONLY = True  # Security: prevent JavaScript access to cookies
+
