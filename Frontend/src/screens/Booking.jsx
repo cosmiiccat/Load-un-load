@@ -49,7 +49,7 @@ export default function Booking() {
   };
 
       try {
-        const res = await fetch('http://127.0.0.1:8000/service/booking/', {
+        const res = await fetch('https://load-un-load-3.onrender.com/service/booking/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ export default function Booking() {
     };
 
         try {
-            const res = await fetch('http://127.0.0.1:8000/service/estimate/', {
+            const res = await fetch('https://load-un-load-3.onrender.com/service/estimate/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

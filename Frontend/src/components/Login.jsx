@@ -17,7 +17,7 @@ export default function Login() {
     };
   
     try {
-      const response = await fetch('http://localhost:8000/service/login/', {
+      const response = await fetch('https://load-un-load-3.onrender.com/service/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

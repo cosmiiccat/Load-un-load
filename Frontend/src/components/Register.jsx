@@ -25,7 +25,7 @@ export default function Register() {
         };
 
         try {
-            const response = await fetch('http://localhost:8000/service/register/', {
+            const response = await fetch('https://load-un-load-3.onrender.com/service/register/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

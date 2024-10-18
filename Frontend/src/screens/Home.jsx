@@ -27,7 +27,7 @@ export default function Home() {
     };
 
         try {
-          const res = await fetch('http://127.0.0.1:8000/service/assign/', {
+          const res = await fetch('https://load-un-load-3.onrender.com/service/assign/', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ export default function Home() {
     };
 
       try {
-        const res = await fetch('http://127.0.0.1:8000/service/assigned/', {
+        const res = await fetch('https://load-un-load-3.onrender.com/service/assigned/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ export default function Home() {
 
     const fetchData = async () => {
       try {
-        const res = await fetch('http://127.0.0.1:8000/service/unassigned/', {
+        const res = await fetch('https://load-un-load-3.onrender.com/service/unassigned/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
