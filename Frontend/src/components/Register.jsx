@@ -42,7 +42,8 @@ export default function Register() {
             console.log(responseData); 
             localStorage.setItem('user_id', responseData['user_id']);
             localStorage.setItem('user_type', responseData['user_type']);
-            navigate('/');
+            localStorage.setItem('first_name', firstName);
+            navigate('/login/');
             
         } catch (error) {
             console.error('Error:', error);

@@ -96,7 +96,7 @@ def login(request):
                     email=user[3],
                 )
                 # django_login(request, user=None) 
-                return JsonResponse({"success":"true", "message": "Login successful", "user_id": user[0], "user_type": user[5]})
+                return JsonResponse({"success":"true", "message": "Login successful", "user_id": user[0], "user_type": user[5], "first_name": user[1]})
             else:
                 return JsonResponse({"success":"false", "error": "Invalid credentials"}, status=401)
         else:

@@ -5,6 +5,7 @@ import Map from './../assets/placeholder.png'
 import AI from './../assets/ai1.png'
 import Send from'./../assets/ai1.png'
 import Navbar from '../components/Navbar'
+import { useNavigate } from 'react-router-dom'
 
 export default function Booking() {
 
@@ -27,6 +28,7 @@ export default function Booking() {
   const [expectedPrice, setExpectedPrice] = useState('3000');
 
   const [gotResponse, setGotResponse] = useState(false); 
+  const navigate = useNavigate(); 
 
   const placeorder = async (event) => {
     
@@ -63,6 +65,7 @@ export default function Booking() {
 
         const data = await res.json();
         console.log(data["message"])
+        navigate('/home/')
     } catch (error) {
         console.error('Error:', error);
     }

@@ -38,6 +38,7 @@ export default function Login() {
       // Redirect to the desired page (e.g., dashboard)
       localStorage.setItem('user_id', responseData['user_id']);
       localStorage.setItem('user_type', responseData['user_type']);
+      localStorage.setItem('first_name', responseData['first_name']);
       navigate('/');
       
     } catch (error) {
