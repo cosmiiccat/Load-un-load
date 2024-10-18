@@ -18,6 +18,7 @@ export default function Home() {
   const [unassigned, setUnassigned] = useState([]);
   const [assigned, setAssigned] = useState([]);
   const [jobStatus, updateJobStatus] = useState('');
+  const navigate = useNavigate(); 
   
   const assignDriver = async (bookingId, userId) => {
     
@@ -101,6 +102,12 @@ export default function Home() {
   useEffect(() => {
     fetchData();
     console.log(user_id);
+    if (user_type == "admin") {
+      navigate('/admin/dashboard/');
+    }
+    if(user_type != "admin" && user_type != "customer" && user_type != "driver"){
+      navigate('/login/')
+    }
 }, []);
   
 
@@ -281,6 +288,7 @@ export default function Home() {
           </div>
         )
       }
+      
     </div>
   )
 }

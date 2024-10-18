@@ -5,6 +5,7 @@ import Booking from './screens/Booking';
 import Login from './components/Login';
 import Register from './components/Register';
 import Track from './screens/Track';
+import Dashboard from './screens/Dashboard'
 
 import 'leaflet/dist/leaflet.css';
 
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
     path: "/register/",
     element: <Register/>,
   },
+  {
+    path: "/admin/dashboard/",
+    element: <Dashboard/>
+  }
 ]);
 
 
