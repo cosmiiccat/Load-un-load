@@ -2,19 +2,27 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Home from './screens/Home';
 import Booking from './screens/Booking';
+import Login from './components/Login';
+import Register from './components/Register';
+import Track from './screens/Track';
+
 import 'leaflet/dist/leaflet.css';
-import LocationPicker from './components/LocationPicker';
 
 import {
   createBrowserRouter,
   RouterProvider,
+  Navigate
 } from "react-router-dom";
 
 import './index.css'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
+    element: <Navigate to="/home/" />
+  },
+  {
+    path: "/home/",
     element: <Home/>,
   },
   {
@@ -22,8 +30,16 @@ const router = createBrowserRouter([
     element: <Booking/>,
   },
   {
-    path: "/test/",
-    element: <LocationPicker/>,
+    path: "/users/track/",
+    element: <Track/>,
+  },
+  {
+    path: "/login/",
+    element: <Login/>,
+  },
+  {
+    path: "/register/",
+    element: <Register/>,
   },
 ]);
 
